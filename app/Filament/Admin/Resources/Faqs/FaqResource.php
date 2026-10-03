@@ -16,9 +16,11 @@ use Filament\Tables\Table;
 
 class FaqResource extends Resource
 {
+    // protected static ?string $navigationIcon = 'heroicon-o-question-mark-circle';
+
     protected static ?string $model = Faq::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-question-mark-circle';
 
     protected static ?string $recordTitleAttribute = 'title';
 
