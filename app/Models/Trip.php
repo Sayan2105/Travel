@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Trip extends Model
 {
@@ -11,5 +12,9 @@ class Trip extends Model
 
     public function days() {
         return $this->hasMany(TripDay::class)->orderBy('day_number');
+    }
+
+    public function bookings() {
+        return $this->hasMany(Booking::class);
     }
 }
